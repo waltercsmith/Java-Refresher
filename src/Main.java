@@ -15,6 +15,12 @@ public class Main {
         return;
     }
 
+    static double calculateInterest(double amt, double rate, int years){
+        double interest = amt * rate * years;
+
+        return amt * rate * years;
+    }
+
 //    The method called swap switches the position of two integers
 //    static void swap(int i, int j){
 //        int k = i;
@@ -29,6 +35,10 @@ public class Main {
         System.out.println("After method call");
 
         showSum(7.5f, 1.4f, 0);
+
+       double result = calculateInterest(100d,0.05d,10);
+
+        System.out.println(result);
 
 //        System.out.println("Hello, Walter");
 //
