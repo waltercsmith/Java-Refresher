@@ -9,7 +9,15 @@ public class Main {
         for (int i = 0; i < count; i++)
             System.out.println(sum);
     }
+
+//    The method called swap switches the position of two integers
+    static void swap(int i, int j){
+        int k = i;
+        i = j;
+        j = k;
+    }
     public static void main(String[] args) {
+
 
         System.out.println("Before method call");
         doSomething();
