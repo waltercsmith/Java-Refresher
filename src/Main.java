@@ -39,15 +39,16 @@ public class Main {
     public static void main(String[] args) {
 
 
-        System.out.println("Before method call");
-        doSomething();
-        System.out.println("After method call");
-
-        if (args.length < 1)
-            System.out.println("No args provided");
-        else
-            for (String arg : args)
-                System.out.println(arg);
+//        System.out.println("Before method call");
+//        doSomething();
+//        System.out.println("After method call");
+//
+//        if (args.length < 1)
+//            System.out.println("No args provided");
+//        else
+//            for (String arg : args)
+//                System.out.println(arg);
+//        System.out.println(args.length);
 
 //        showSum(7.5f, 1.4f, 0);
 
@@ -106,44 +107,57 @@ public class Main {
 //            System.out.println(sum);
 //        }
 //
-//        double[] leftVals = {100.0d, 25.0d, 225.0d, 11.0d};
-//        double[] rightVals = {50.0d, 92.0d, 17.0d, 3.0d};
-//        char[] opCodes = {'d', 'a', 's', 'm'};
-//        double[] results = new double[opCodes.length];
-//
-//        for (int i = 0; i < opCodes.length; i++) {
-//
-//            results[i] = execute(opCodes[i], leftVals[i], rightVals[i]);
-//        }
-//
-//        for (double currentResult : results)
-//            System.out.println(currentResult);
-//
-//    }
-//
-//    static double execute(char opCode, double leftVal, double rightVal) {
-//        double result;
-//        switch (opCode) {
-//            case 'a':
-//                result = leftVal + rightVal;
-//                break;
-//            case 's':
-//                result = leftVal - rightVal;
-//                break;
-//            case 'm':
-//                result = leftVal * rightVal;
-//                break;
-//            case 'd':
-//                result = rightVal != 0 ? leftVal / rightVal : 0.0d;
-//                break;
-//            default:
-//                System.out.println("Invalid opCode: " + opCode);
-//                result = 0.0d;
-//                break;
-//
-//        }
-//        return result;
-//    }
+        double[] leftVals = {100.0d, 25.0d, 225.0d, 11.0d};
+        double[] rightVals = {50.0d, 92.0d, 17.0d, 3.0d};
+        char[] opCodes = {'d', 'a', 's', 'm'};
+        double[] results = new double[opCodes.length];
+
+        if(args.length == 0) {
+            for (int i = 0; i < opCodes.length; i++) {
+
+                results[i] = execute(opCodes[i], leftVals[i], rightVals[i]);
+            }
+
+            for (double currentResult : results)
+                System.out.println(currentResult);
+        } else if (args.length == 3)
+            handleCommandLine(args);
+        else
+            System.out.println("Please provide and operation code and 2 numeric values");
+    }
+
+    private static void handleCommandLine(String[] args) {
+        char opCode = args[0].charAt(0);
+        double leftVal = Double.parseDouble(args[1]);
+        double rightVal = Double.parseDouble(args[2]);
+
+        double result = execute(opCode,leftVal,rightVal);
+        System.out.println(result);
+    }
+
+    static double execute(char opCode, double leftVal, double rightVal) {
+        double result;
+        switch (opCode) {
+            case 'a':
+                result = leftVal + rightVal;
+                break;
+            case 's':
+                result = leftVal - rightVal;
+                break;
+            case 'm':
+                result = leftVal * rightVal;
+                break;
+            case 'd':
+                result = rightVal != 0 ? leftVal / rightVal : 0.0d;
+                break;
+            default:
+                System.out.println("Invalid opCode: " + opCode);
+                result = 0.0d;
+                break;
+
+        }
+        return result;
+    }
 
 /*          For-each Loop
                Executes a statement once for each array member, Handles getting collection length, Handles acccessing
@@ -163,6 +177,6 @@ public class Main {
 
 
     }
-}
+
 
 
