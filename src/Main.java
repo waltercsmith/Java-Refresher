@@ -4,18 +4,23 @@ public class Main {
         System.out.println("Still inside");
     }
 
+//    added an if statement
     static void showSum(float x, float y, int count){
+        if (count < 1)
+            return;
+
         float sum = x + y;
         for (int i = 0; i < count; i++)
             System.out.println(sum);
+        return;
     }
 
 //    The method called swap switches the position of two integers
-    static void swap(int i, int j){
-        int k = i;
-        i = j;
-        j = k;
-    }
+//    static void swap(int i, int j){
+//        int k = i;
+//        i = j;
+//        j = k;
+//    }
     public static void main(String[] args) {
 
 
@@ -23,7 +28,7 @@ public class Main {
         doSomething();
         System.out.println("After method call");
 
-        showSum(7.5f, 1.4f, 3);
+        showSum(7.5f, 1.4f, 0);
 
 //        System.out.println("Hello, Walter");
 //
