@@ -4,11 +4,19 @@ public class Main {
         System.out.println("Still inside");
     }
 
+    static void showSum(float x, float y, int count){
+        float sum = x + y;
+        for (int i = 0; i < count; i++)
+            System.out.println(sum);
+    }
     public static void main(String[] args) {
 
         System.out.println("Before method call");
         doSomething();
         System.out.println("After method call");
+
+        showSum(7.5f, 1.4f, 3);
+
 //        System.out.println("Hello, Walter");
 //
         // Just a basic While Loop
