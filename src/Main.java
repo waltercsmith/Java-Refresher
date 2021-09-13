@@ -1,11 +1,11 @@
 public class Main {
-    static void doSomething(){
+    static void doSomething() {
         System.out.println("Inside method");
         System.out.println("Still inside");
     }
 
-//    added an if statement
-    static void showSum(float x, float y, int count){
+    //    added an if statement
+    static void showSum(float x, float y, int count) {
         if (count < 1)
             return;
 
@@ -15,22 +15,22 @@ public class Main {
         return;
     }
 
-    static double calculateInterest(double amt, double rate, int years){
+    static double calculateInterest(double amt, double rate, int years) {
         double interest = amt * rate * years;
 
         return amt * rate * years;
     }
 
-    static double[] produceInterestHistory(double amt, double rate, int years){
+    static double[] produceInterestHistory(double amt, double rate, int years) {
         double[] accumulatedInterest = new double[years];
-        for(int yearIndex = 0; yearIndex < years; yearIndex++){
+        for (int yearIndex = 0; yearIndex < years; yearIndex++) {
             int year = yearIndex + 1;
-            accumulatedInterest[yearIndex] = calculateInterest(amt,rate,year);
+            accumulatedInterest[yearIndex] = calculateInterest(amt, rate, year);
         }
         return accumulatedInterest;
     }
 
-//    The method called swap switches the position of two integers
+    //    The method called swap switches the position of two integers
 //    static void swap(int i, int j){
 //        int k = i;
 //        i = j;
@@ -45,10 +45,9 @@ public class Main {
 
         showSum(7.5f, 1.4f, 0);
 
-       double result = calculateInterest(100d,0.05d,10);
+//        double result = calculateInterest(100d, 0.05d, 10);
 
-        System.out.println(result);
-
+//        System.out.println(result);
 
 
 //        System.out.println("Hello, Walter");
@@ -88,46 +87,57 @@ public class Main {
 //        }
 
 //        Arrays an order collection of elements
-//        float[] theVals = new float[3]; //--- array that holds three elements
-//        theVals[0] = 10.0f;
-//        theVals[1] = 20.0f;
-//        theVals[2] = 15.0f;
-//
-//        float[] theVals = {10.0f,20.0f,15.0f}; //   <-- can assign elements this way as well
-//        // to know how many elements in a array we use length
-//        float sum = 0.0f; //--- will hold the new value of the sum of the elements in the array
-//        for (int index = 0; index < theVals.length; index++){
-//            sum += theVals[index];
-//            System.out.println(sum);
-//        }
+        float[] theVals = new float[3]; //--- array that holds three elements
+        theVals[0] = 10.0f;
+        theVals[1] = 20.0f;
+        theVals[2] = 15.0f;
 
-//        double[] leftVals = {100.0d, 25.0d, 225.0d, 11.0d};
-//        double[] rightVals ={ 50.0d, 92.0d, 17.0d, 3.0d};
-//        char[] opCodes = { 'd', 'a' , 's', 'm'};
-//        double[] results = new double[opCodes.length];
-//
-//        for(int i = 0; i < opCodes.length; i++) {
-//            switch (opCodes[i]) {
-//                case 'a':
-//                    results[i] = leftVals[i] + rightVals[i];
-//                    break;
-//                case 's':
-//                    results[i] = leftVals[i] - rightVals[i];
-//                    break;
-//                case 'm':
-//                    results[i] = leftVals[i] * rightVals[i];
-//                    break;
-//                case 'd':
-//                    results[i] = rightVals[i] != 0 ? leftVals[i] / rightVals[i] : 0.0d;
-//                    break;
-//                default:
-//                    System.out.println("Invalid opCode: " + opCodes[i]);
-//                    results[i] = 0.0d;
-//                    break;
-//            }
-//        }
-//        for (double currentResult : results)
-//        System.out.println(currentResult);
+//        float[] theVals = {10.0f, 20.0f, 15.0f}; //   <-- can assign elements this way as well
+        // to know how many elements in a array we use length
+        float sum = 0.0f; //--- will hold the new value of the sum of the elements in the array
+        for (int index = 0; index < theVals.length; index++) {
+            sum += theVals[index];
+            System.out.println(sum);
+        }
+
+        double[] leftVals = {100.0d, 25.0d, 225.0d, 11.0d};
+        double[] rightVals = {50.0d, 92.0d, 17.0d, 3.0d};
+        char[] opCodes = {'d', 'a', 's', 'm'};
+        double[] results = new double[opCodes.length];
+
+        for (int i = 0; i < opCodes.length; i++) {
+
+            results[i] = execute(opCodes[i], leftVals[i], rightVals[i]);
+        }
+
+        for (double currentResult : results)
+            System.out.println(currentResult);
+
+    }
+
+    static double execute(char opCode, double leftVal, double rightVal) {
+        double result;
+        switch (opCode) {
+            case 'a':
+                result = leftVal + rightVal;
+                break;
+            case 's':
+                result = leftVal - rightVal;
+                break;
+            case 'm':
+                result = leftVal * rightVal;
+                break;
+            case 'd':
+                result = rightVal != 0 ? leftVal / rightVal : 0.0d;
+                break;
+            default:
+                System.out.println("Invalid opCode: " + opCode);
+                result = 0.0d;
+                break;
+
+        }
+        return result;
+    }
 
 /*          For-each Loop
                Executes a statement once for each array member, Handles getting collection length, Handles acccessing
@@ -136,14 +146,17 @@ public class Main {
 
 //        float[] someValues = { 20.0f, 21.0f, 10.0f};
 //        float sum = 0.0f;
-//        
+//
 //        for (float currentVal : someValues){
 //            sum += currentVal;
 //        }
 //        System.out.println(sum);
 
 
+//    }
 
 
-    }
+
 }
+
+
