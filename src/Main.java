@@ -21,6 +21,15 @@ public class Main {
         return amt * rate * years;
     }
 
+    static double[] produceInterestHistory(double amt, double rate, int years){
+        double[] accumulatedInterest = new double[years];
+        for(int yearIndex = 0; yearIndex < years; yearIndex++){
+            int year = yearIndex + 1;
+            accumulatedInterest[yearIndex] = calculateInterest(amt,rate,year);
+        }
+        return accumulatedInterest;
+    }
+
 //    The method called swap switches the position of two integers
 //    static void swap(int i, int j){
 //        int k = i;
@@ -39,6 +48,8 @@ public class Main {
        double result = calculateInterest(100d,0.05d,10);
 
         System.out.println(result);
+
+
 
 //        System.out.println("Hello, Walter");
 //
