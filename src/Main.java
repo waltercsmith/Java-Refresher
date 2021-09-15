@@ -1,4 +1,6 @@
 public class Main {
+
+
     static void doSomething() {
         System.out.println("Inside method");
         System.out.println("Still inside");
@@ -36,7 +38,10 @@ public class Main {
 //        i = j;
 //        j = k;
 //    }
+
     public static void main(String[] args) {
+
+        int luckyNumber = 308;
 
 
 //        System.out.println("Before method call");
