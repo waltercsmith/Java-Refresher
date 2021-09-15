@@ -43,7 +43,7 @@ public class Main {
 
         int luckyNumber = 308;
 
-
+        System.out.println(luckyNumber);
 //        System.out.println("Before method call");
 //        doSomething();
 //        System.out.println("After method call");
