@@ -1,6 +1,6 @@
 public class JavaExercisesEasy {
 
-    public Integer sumOfTwo(Integer i, Integer j){
+    public int sumOfTwo(int i, int j){
         return i + j;
     }
     public static void main(String[] args) {
