@@ -10,7 +10,7 @@ public class Flight {
         passengers = 0;
     }
 
-    void add1Passenger(){
+    public void add1Passenger(){
         if(passengers < seats)
             passengers += 1;
     }
