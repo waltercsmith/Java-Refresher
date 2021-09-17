@@ -5,7 +5,7 @@ public class Flight {
     int passengers;
     int seats;
 
-    Flight(){
+    public Flight(){
         seats = 150;
         passengers = 0;
     }
