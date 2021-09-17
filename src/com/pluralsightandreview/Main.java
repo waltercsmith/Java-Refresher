@@ -182,6 +182,7 @@ public class Main {
 
 //    }
 
+    Flight vaToCa = new Flight();
 
     }
 
