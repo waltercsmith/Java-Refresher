@@ -2,8 +2,21 @@ package com.pluralsightandreview;
 
 public class Flight {
 
-    int passengers;
-    int seats;
+    private int passengers;
+
+    public int getPassengers() {
+        return passengers;
+    }
+
+    public void setPassengers(int passengers) {
+        this.passengers = passengers;
+    }
+
+    public void setSeats(int seats) {
+        this.seats = seats;
+    }
+
+    private int seats;
 
     public Flight(){
         seats = 150;
@@ -20,4 +33,13 @@ public class Flight {
     private void handleTooMany(){
         System.out.println("Too many");
     }
+
+    public boolean hasRoom(Flight f2){
+        int total = this.passengers + f2.passengers;
+
+        return total <= seats;
+    }
+
+
+
 }
