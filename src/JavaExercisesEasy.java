@@ -7,17 +7,18 @@ public class JavaExercisesEasy {
 //    Calculates the factorial of a given number
     public static int factorial(int num){
 
-        for (int i = 1; i <= num; ++i){
-            return i * num;
+        for (int i = 1; i <= num; i++){
+//            return i * num;
         }
-        return num;
+        return num * 1;
     }
 
     public static void main(String[] args) {
 
-        System.out.println(sumOfTwo(1,2));
+//        System.out.println(sumOfTwo(1,2));
 
         System.out.println(factorial(3));
+
 
     }
 }
