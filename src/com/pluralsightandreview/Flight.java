@@ -12,11 +12,16 @@ public class Flight {
         this.passengers = passengers;
     }
 
+    private int seats;
+
     public void setSeats(int seats) {
         this.seats = seats;
     }
 
-    private int seats;
+    public int getSeats() {
+        return seats;
+    }
+
 
     public Flight(){
         seats = 150;
