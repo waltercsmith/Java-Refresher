@@ -1,3 +1,5 @@
+package com.pluralsightandreview;
+
 public class JavaExercisesEasy {
 
     public static int sumOfTwo(int i, int j){
