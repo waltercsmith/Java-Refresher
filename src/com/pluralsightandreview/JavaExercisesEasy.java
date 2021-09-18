@@ -9,11 +9,12 @@ public class JavaExercisesEasy {
 //    Calculates the factorial of a given number
     public static int factorial(int num){
 
-        for (int i = 1; i < num; i++){
+        int factorial = 0;
+        for (int i = 1; i < num; ++i)
 //            return i * num;
-            System.out.println();
-        }
-        return num;
+            System.out.println(factorial = i);
+
+        return factorial * num ;
     }
 
     public static void main(String[] args) {
@@ -21,6 +22,8 @@ public class JavaExercisesEasy {
 //        System.out.println(sumOfTwo(1,2));
 
         System.out.println(factorial(3));
+
+
 
 
     }
