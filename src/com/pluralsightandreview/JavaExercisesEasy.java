@@ -22,7 +22,7 @@ public class JavaExercisesEasy {
 
 //        System.out.println(sumOfTwo(1,2));
 
-        System.out.println(factorial(3));
+        System.out.println(factorial(4));
 
 
 
