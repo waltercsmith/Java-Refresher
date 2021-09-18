@@ -10,9 +10,10 @@ public class JavaExercisesEasy {
     public static int factorial(int num){
 
         int factorial = 0;
-        for (int i = 1; i < num; ++i)
+        for (int i = 1; i <= num; i++)
 //            return i * num;
-            System.out.println(factorial = i);
+//            System.out.println(factorial = i);
+            factorial = i;
 
         return factorial * num ;
     }
