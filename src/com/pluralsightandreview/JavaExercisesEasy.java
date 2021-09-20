@@ -31,14 +31,14 @@ public class JavaExercisesEasy {
 //
 //        }
 
-        int container = 0;
-        for (int z = 4; z >= 1; --z){
-            container = container + z;
+        int container = 1;
+        for (int z = 1; z <= 4; z++){
+            container = container * z;
 //            System.out.println("the value of z is: " + z);
 //            System.out.println("container = " + container);
         }
             int totalSumContainer = container;
-        System.out.println(totalSumContainer);
+        System.out.println("the total sum of container is: " + totalSumContainer);
 
 //        System.out.println(sumOfTwo(1,2));
 
