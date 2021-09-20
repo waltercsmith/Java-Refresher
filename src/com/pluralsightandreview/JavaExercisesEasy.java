@@ -26,9 +26,17 @@ public class JavaExercisesEasy {
             x++;
         }
 
+        for (int y = 1; y <= 5; ++y){
+            System.out.println("the value of y is: " + y);
+
+        }
+
+        for (int z = 5; z >= 1; --z){
+            System.out.println("the value of z is: " + z);
+        }
 //        System.out.println(sumOfTwo(1,2));
 
-        System.out.println(factorial(4));
+//        System.out.println(factorial(4));
 
 
 
