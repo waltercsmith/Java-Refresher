@@ -31,19 +31,29 @@ public class JavaExercisesEasy {
 //
 //        }
 
-        int container = 1;
-        for (int z = 1; z <= 4; z++){
-            container = container * z;
-//            System.out.println("the value of z is: " + z);
-//            System.out.println("container = " + container);
-        }
-            int totalSumContainer = container;
-        System.out.println("the total sum of container is: " + totalSumContainer);
+//        int container = 1;
+//        for (int z = 1; z <= 4; z++){
+//            container = container * z;
+//            System.out.println(container);
+////            System.out.println("the value of z is: " + z);
+////            System.out.println("container = " + container);
+//        }
+//            int totalSumContainer = container;
+//        System.out.println("the total sum of container is: " + totalSumContainer);
 
 //        System.out.println(sumOfTwo(1,2));
 
 //        System.out.println(factorial(4));
 
+
+//        Practice some conditionals
+        int usDrinkAge = 21;
+        int usDrivingAge = 16;
+        if (usDrinkAge > 18){
+            System.out.println("About to purchase and consume alcohol");
+        } else {
+            System.out.println("Yeah, you're not the legal age to participate in this activity");
+        }
 
 
 
