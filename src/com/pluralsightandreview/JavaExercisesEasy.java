@@ -62,6 +62,8 @@ public class JavaExercisesEasy {
         System.out.println(test);
         topSpeed = 357;
 
+        System.out.println(test);
+
 
     }
 }
