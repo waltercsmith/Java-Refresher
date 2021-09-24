@@ -55,6 +55,12 @@ public class JavaExercisesEasy {
             System.out.println("Yeah, you're not the legal age to participate in this activity");
         }
 
+//        Ternary Operator
+
+        int topSpeed = 200;
+        String test = (topSpeed < 300) ? "Your car is not fast enough" : "Your is fast enough";
+        System.out.println(test);
+        topSpeed = 357;
 
 
     }
